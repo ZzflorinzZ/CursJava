@@ -2,32 +2,32 @@ package curs2;
 
 public class Rectangle {
 	
-	private int lenght;
+	private int length;
 	private int width;
 	
 	public Rectangle() {}	//constructorul clasei; nu returneaza niciodata nimic
 	
-	public Rectangle(int lenght, int width) {
-		setLenght(lenght);
-		setWirdth(width);
+	public Rectangle(int length, int width) {
+		setLength(length);
+		setWidth(width);
 	}
 	
-	public int getLenght() {
-		return lenght;
+	public int getLength() {
+		return length;
 	}
-	public void setLenght(int lenght) {
-		this.lenght = lenght;
+	public void setLength(int length) {
+		this.length = length;
 	}
-	public int getWirdth() {
+	public int getWidth() {
 		return width;
 	}
-	public void setWirdth(int width) {
+	public void setWidth(int width) {
 		this.width = width;
 	}
 	
 	
 	public int calculateArea() {
-		return lenght * width;
+		return length * width;
 		
 	}
 	

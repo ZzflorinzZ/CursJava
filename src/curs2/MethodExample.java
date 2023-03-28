@@ -7,7 +7,7 @@ public class MethodExample {
 		int lenght = 4;
 		int width = 2;
 		int roomArea = lenght * width;
-		System.out.println("Aria camerei este:" + roomArea);
+		//System.out.println("Aria camerei este:" + roomArea);
 		
 		
 		int lenght2 = 6;
@@ -16,25 +16,26 @@ public class MethodExample {
 		//System.out.println("Aria camerei este:" + roomArea2);
 		
 		
-		System.out.println("==============================");
+		//System.out.println("==============================");
+		
 		MethodExample obj = new MethodExample();
 		obj.calculateArea(4, 4);
 		obj.calculateArea(5, 4);
 		obj.calculateArea(3, 4);
 		
-		System.out.println("Aria camerei este:" + obj.calculateArea2(3,4));
+		System.out.println("Aria camerei este:" + obj.calculateArea2(7,7));
 	}
 
 	
 	public void calculateArea(int lenght, int width) {
 		
 		int roomArea = lenght * width;
-		System.out.println("Aria camerei este:" + roomArea);
+		//System.out.println("Aria camerei este:" + roomArea);
 		
 		
 	}
 	
-	/*void = return type;
+	/*void 	= return type;
 			= nu intoarce nimic
 	*/
 	

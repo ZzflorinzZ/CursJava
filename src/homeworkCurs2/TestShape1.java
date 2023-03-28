@@ -14,9 +14,9 @@ public class TestShape1 {
 		Shape1 cerc = new Shape1(3.0);
 		//cerc.setRadius(3.0);
 
-	//System.out.println("The area of the square is: " + patrat.calculateSquareArea());
-	//System.out.println("The area of the rectangle is: " + dreptunghi.calculateRectangleArea());
-	//System.out.println("The area of the circle is: " + cerc.getRadius()*cerc.getRadius()*Math.PI);
+	System.out.println("The area of the square is: " + patrat.calculateSquareArea());
+	System.out.println("The area of the rectangle is: " + dreptunghi.calculateRectangleArea());
+	System.out.println("The area of the circle is: " + cerc.getRadius()*cerc.getRadius()*Math.PI);
 	
 	}
 

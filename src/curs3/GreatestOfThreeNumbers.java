@@ -10,7 +10,10 @@ import java.util.Scanner;
 
 public class GreatestOfThreeNumbers {
 
-	int number1, number2, number3;
+		int number1, number2, number3;
+		//int number1;
+		//int number2;
+		//int number3;
 	
 	public void askForThreeNumbers() {
 		Scanner scan = new Scanner(System.in);

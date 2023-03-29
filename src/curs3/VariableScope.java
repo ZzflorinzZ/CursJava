@@ -30,12 +30,14 @@ public class VariableScope {
 		System.out.println(prenume);
 		
 		System.out.println(culoare);
+		
+		obj.printeazaSalut();
 
 	}
 	
 	public void printeazaSalut() {
 		
-		System.out.println("Salut" + nume);
+		System.out.println("Salut " + nume);
 	}
 
 }

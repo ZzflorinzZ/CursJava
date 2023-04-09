@@ -47,7 +47,7 @@ public class PasswordValidator {
 	public String getPassword() {
 		System.out.println("Te rog sa introduci parola");
 		String password = scan.next();
-		return password;
+		return password; 
 	}
 	
 	public void checkPasswordRules(String password) {

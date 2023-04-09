@@ -5,12 +5,12 @@ import java.util.Scanner;
 public class IsCharVowel {
 
 	public static void main(String[] args) {
-		
+
 		System.out.println("Introdu o litera");
 		Scanner scan = new Scanner(System.in);
 		char litera = scan.next().charAt(0);
-		
-		switch(litera ) {
+
+		switch (litera) {
 		case 'a':
 		case 'e':
 		case 'i':
@@ -23,10 +23,9 @@ public class IsCharVowel {
 		case 'U':
 			System.out.println("Is vowel");
 			break;
-		default:	
+		default:
 			System.out.println("Is not vowel");
 		}
-		
 
 	}
 

@@ -5,8 +5,8 @@ import java.util.Scanner;
 public class AcordareBonusV2 {
 
 		static int vechime;
-	//	int valoareVanzari;
-	//	int lunaVanzari;
+		static int valoareVanzari;
+		static int lunaVanzari;
 		boolean valid;
 		Scanner scan = new Scanner(System.in);
 
@@ -15,31 +15,29 @@ public class AcordareBonusV2 {
 			vechime = scan.nextInt();
 		}
 		
-		public int inputUserVanzari() { 
+		public void inputUserVanzari() { 
 			System.out.println("Introduceti valoarea vanzarilor efectuate");
-			int valoareVanzari = scan.nextInt(); 
-			return valoareVanzari;
+			valoareVanzari = scan.nextInt(); 
 		}
 			
-		public int inputUserLuna() {
+		public void inputUserLuna() {
 			System.out.println("Introduceti luna in care ati efectuat vanzarile");
-			int lunaVanzari = scan.nextInt();
-			return lunaVanzari;  
+			lunaVanzari = scan.nextInt(); 
 		}
 
-		public void valoareVanzariValidation(int valoareVanzari) {
+		public void valoareVanzariValidation() {
 			valid = true;
 			if (valoareVanzari < 0) {
 				valid = false;
-				System.out.println("Introduceti o valoare valida");
+				System.out.println("Valoarea introdusa este invalida");
 			}
 		}
 		
-		public void lunaVanzariValidation(int lunaVanzari) {
+		public void lunaVanzariValidation() {
 			valid = true;
 			if(lunaVanzari <1 || lunaVanzari >12) {
 				valid = false;
-				System.out.println("Introduceti o luna valida");
+				System.out.println("Luna introdusa este invalida");
 			}
 		}
 		
@@ -67,11 +65,13 @@ public class AcordareBonusV2 {
 			obj.inputUserVechime();
 			
 			do {
-				obj.valoareVanzariValidation(obj.inputUserVanzari());
+				obj.inputUserVanzari();
+				obj.valoareVanzariValidation();
 			}while (!obj.valid);
 			
 			do {
-				obj.lunaVanzariValidation(obj.inputUserLuna());
+				obj.inputUserLuna();
+				obj.lunaVanzariValidation();
 			}while (!obj.valid);
 			
 
@@ -83,20 +83,7 @@ public class AcordareBonusV2 {
 				System.out.println("Felicitari! Ai primit un bonus in valoare de 200 Ron");
 				break;
 			case 3:
-	//			obj.vechime3Ani();
-/*
- * aici m-am blocat; nu stiu cum sa ii dau parametrii 
- * daca o scriu de forma
- * 		obj.vechime3Ani(obj.valoareVanzariValidation(obj.inputUserVanzari()),obj.lunaVanzariValidation(obj.inputUserLuna());)	
- * ma trece din nou prin scan si imi cere sa reintroduc valoarea vanzarilor si a lunii; 
- * 		practic validarile do-while au fost facute degeaba
- * iar daca introduc o valoare invalida	pe valoare vanzari, pare ca se amesteca codul - trece din nou prin do-while
- * dar si executea mai departe si cere luna
- * am doua print-uri simultane:
- * 		Introduceti o valoare valida
- * 		Introduceti luna in care ati efectuat vanzarile	
- */
-				
+				obj.vechime3Ani(valoareVanzari, lunaVanzari);				
 				break;
 			default:
 				System.out.println("Ai primit deja prea multe bonusuri! Incearca sa vinzi si pentru alte companii! :D");

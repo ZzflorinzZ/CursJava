@@ -25,18 +25,39 @@ import java.util.Scanner;
 
 public class AcordareBonus {
 
-	int valoareVanzari;
+	static int valoareVanzari;
 	static int vechime;
-	int lunaVanzari;
+	static int lunaVanzari;
+	static Scanner scan = new Scanner(System.in);
+	
+	boolean valid;
 
-	public void inputUser() {
-		Scanner scan = new Scanner(System.in);
+	public void inputUserVechime() {
 		System.out.println("Introduceti vechimea dvs. in companie");
 		vechime = scan.nextInt();
+	}
+	
+	public void inputUserVanzariSiLuna() {
 		System.out.println("Introduceti valoarea vanzarilor efectuate");
 		valoareVanzari = scan.nextInt();
 		System.out.println("Introduceti luna in care ati efectuat vanzarile");
 		lunaVanzari = scan.nextInt();
+	}
+	
+	public void validareValoareVanzariSiLuna() {
+		
+		valid = true;
+		
+		if(valoareVanzari < 0) {
+			valid = false;
+            System.out.println("Te rog sa introduci o valoare valida pentru vanzari");
+            valoareVanzari = scan.nextInt();
+		}
+		if(lunaVanzari < 1 || lunaVanzari > 12) {
+			valid = false;
+            System.out.println("Te rog sa introduci o luna valida");  
+            lunaVanzari = scan.nextInt();
+		}
 	}
 
 	public void vechime3Ani() {
@@ -49,17 +70,18 @@ public class AcordareBonus {
 			} else if ((valoareVanzari > 5000 && valoareVanzari <= 10000) && (lunaVanzari >= 7 && lunaVanzari <= 11)) {
 				System.out.println("Felicitari! Ai primit un bonus in valoare de 1000 Ron");
 			} else if ((valoareVanzari > 5000 && valoareVanzari <= 10000) && lunaVanzari == 12) {
-				System.out.println("Felicitari! Ai primit un bonus in valoare de 900 Ron. In decembrie se vand singure!");
+				System.out.println("Felicitari! Ai primit un bonus in valoare de 900 Ron. In decembrie se vand singure!");   
 			}
 		if (valoareVanzari > 10000) {
 			System.out.println("Felicitari! Ai primit un bonus in valoare de 1200 Ron");
+			}
 		}
-	}
+
 
 	public static void main(String[] args) {
 
 		AcordareBonus obj = new AcordareBonus();
-		obj.inputUser();
+		obj.inputUserVechime();
 
 		switch (vechime) {
 		case 1:
@@ -69,6 +91,12 @@ public class AcordareBonus {
 			System.out.println("Felicitari! Ai primit un bonus in valoare de 200 Ron");
 			break;
 		case 3:
+			obj.inputUserVanzariSiLuna();
+			
+			do {
+				obj.validareValoareVanzariSiLuna();
+			}while (!obj.valid);
+				
 			obj.vechime3Ani();
 			break;
 		default:
@@ -85,4 +113,11 @@ public class AcordareBonus {
  * nu inteleg de ce are nevoie in switch sa faca referitna neaparat catre o variabila statica 
  * vineri nu am definit variabile statice in exemplele de switch...
  * 
+ * 
+ * R: Problema nu este la switch ci in metoda main. Metoda main este un context static, switch-ul doar se intampla 
+ * sa fie chemat in acel context si sa foloseasca variabila aceea. Dar nu switchul avea nevoie sa fie statica 
+ * ci metoda main care executa (public static void main)
+ * 
  */
+
+

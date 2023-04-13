@@ -12,19 +12,20 @@ public class Vocale {
 
 
 		String[] text = {"Eu ", "invat ", "Java"};		
-	//	char[] vocale = {'a','e','i','o','u','A','E','I','O','U'};
+	//	char[] vocale = {'a','e','i','o','u','A','E','I','O','U'}; 		// nefolosit (cred ca pornisem pe o cale gresita)
 		int numarVocale = 0;
 		
-		String elementText = "";
+//		String elementText = "";		// mi-am dat seama ca nu e nevoie de variabila asta
+										// desi cred ca s-ar intelege mai usor codul daca o folosesc
 		
 		
 		for (int i = 0; i<text.length; i++) {
-			elementText = String.valueOf(text[i]);
+//			elementText = String.valueOf(text[i]);
 	//		System.out.println(elementText);
 			
 			int j = 0;
 			do {
-				switch (elementText.charAt(j)) {
+				switch (String.valueOf(text[i]).charAt(j)) {
 				case 'a':
 				case 'e':
 				case 'i':
@@ -39,10 +40,10 @@ public class Vocale {
 	//				break;					// a trebuit sa elimin break-ul din switch ca sa nu intrerupa executia
 				default:
 					
-				j++;
-				}									// desi programul functioneaza,
-			}while (j < elementText.length());		// nu inteleg de ce java a vrut <<elementText.length()>>
-													// in loc de  <<elementText.length>>
+				j++;											// ???			
+				}												// desi programul functioneaza,
+			}while (j < String.valueOf(text[i]).length());		// nu inteleg de ce java a vrut <<.length()>>
+																// in loc de  <<.length>>
 		}											
 			
 			System.out.println("Vocale: " + numarVocale); 

@@ -10,7 +10,7 @@ public class DoWhileExample {
 		//index				0		1		2		3
 		
 		int i = 0;
-		while (i>array.length) {
+		while (i<array.length) {
 			System.out.println(array[i]);
 			i++;
 		}
@@ -23,6 +23,6 @@ public class DoWhileExample {
 			System.out.println(array[j]);		//se executa corpul buclei cel putin o data, indiferent daca
 			j++;								//conditia este adevarata sau falsa
 		}while (j>array.length);
-	}
+	} 
 
 }

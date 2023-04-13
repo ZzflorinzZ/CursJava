@@ -16,7 +16,7 @@ import java.util.Random;
  * 
  * 
  */
-public class RandamBumberGenerator {
+public class RandomNumberGenerator {
 	
 	public int[] generateNumbers() {
 		int[] numbers = new int[6];
@@ -36,7 +36,7 @@ public class RandamBumberGenerator {
 	public boolean checkDuplicateNumber(int[] array, int nr) {
 		for(int number: array) {
 			if(nr == number) {
-				return true;
+				return true; 
 			}
 		}
 		return false;
@@ -45,7 +45,7 @@ public class RandamBumberGenerator {
 
 	public static void main(String[] args) {
 		
-		RandamBumberGenerator rn = new RandamBumberGenerator();
+		RandomNumberGenerator rn = new RandomNumberGenerator();
 		
 		System.out.println(Arrays.toString(rn.generateNumbers()));
 

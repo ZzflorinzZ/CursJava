@@ -15,7 +15,7 @@ public class ForEachExample {
 	//	System.out.println("Introdu nume: ");
 	//	nume[0] = scan.next();
 		
-		for(int i = 0; i<=3; i++) {
+		for(int i = 0; i<3; i++) {
 			System.out.println("Introdu nume: ");
 			nume[i] = scan.next();
 		}

@@ -18,6 +18,8 @@ public class PrivateAccessModifier {
 	 * alta clasa alta pachet: NO 
 	 *
 	 */
+	
+	//test
 
 	
 //	private PrivateAccessModifier() {}

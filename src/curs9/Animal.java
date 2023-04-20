@@ -7,7 +7,7 @@ public class Animal {
 	}
 	
 	public void metodaAnimal() {
-		System.out.println("Metoda doar in anumal");
+		System.out.println("Metoda doar in animal");
 	}
 
 }

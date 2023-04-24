@@ -17,12 +17,7 @@ public class Customer {
 	public static String getName() {
 		return name;
 	}	
-	public String getAddress() {
-		return address;
-	}
-	public String getEmail() {
-		return email;
-	}
+
 	
 
 	 

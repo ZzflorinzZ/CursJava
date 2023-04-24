@@ -1,6 +1,6 @@
 package homeworkCurs10;
 
-public class Account extends Customer{
+public class Account {
 	
 	private int accountNumber;
 	public static double balance;
@@ -10,7 +10,7 @@ public class Account extends Customer{
 	public Account(int accountNumber, double balance, Customer accountOwner) {
 		this.accountNumber = accountNumber;
 		this.balance = balance;
-		this.accountOwner = new Customer(getName(), getAddress(), getEmail());
+		this.accountOwner = accountOwner;
 	}
 
 

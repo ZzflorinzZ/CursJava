@@ -15,7 +15,7 @@ public class ExceptionExample {
 			int num1 = scan.nextInt();
 			System.out.println("Enter num2: ");
 			int num2 = scan.nextInt();
-			num2 = (Integer) null;
+	//		num2 = (Integer) null;
 			
 			System.out.println("division: " + num1/num2);
 		}catch(ArithmeticException e) {								//a impartit la 0

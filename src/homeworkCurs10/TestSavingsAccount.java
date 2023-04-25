@@ -24,13 +24,15 @@ public class TestSavingsAccount {
 			cont.withdraw(withdrawAmount);
 			System.out.println("Please pick up your money!");
 			System.out.println("Your new balance is: " + SavingsAccount.balance); // a trebuit sa definesc variabila balance statica pt a o putea chema
-			thankYou();
+	//		thankYou();
 		} catch (InsuficientFundsException ifexc) {
 			System.out.println("The amount you entered is greater then the available balance: " + SavingsAccount.balance);
-			thankYou();
+	//		thankYou();
 			System.out.println(ifexc);
 		} catch (Exception exc) {
 			System.out.println("Something went wrong!");
+		}finally {			//se foloseste doar pe try/catch
+			thankYou();
 		}
 	}
 

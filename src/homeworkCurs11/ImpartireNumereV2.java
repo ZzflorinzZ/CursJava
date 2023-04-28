@@ -8,31 +8,36 @@ public class ImpartireNumereV2 {
 	public static void main(String[] args) {
 
 		Scanner scan = new Scanner(System.in);
-		int nfeCount;
-		int aeCount;
+//		int nfeCount=0;
+//		int aeCount=0;
 
-		try {
+		
 			do {
-				nfeCount = 0;
-				aeCount = 0;
+				try {
+//				nfeCount = 0;
+//				aeCount = 0;
 				try {
 					System.out.println("Please insert 2 numbers");
-					int number1 = scan.nextInt();
-					int number2 = scan.nextInt();
-
+					int number1 = Integer.parseInt(scan.next());
+					int number2 = Integer.parseInt(scan.next());
+//number2 = (Integer) null;
 					System.out.println("Numbers division result is: " + number1 / number2);
+					break;
 
 				} catch (NumberFormatException nfe) {
 					System.out.println("Please use only numbers!");
-					nfeCount++;
+	//				nfeCount++;
 				} catch (ArithmeticException ae) {
 					System.out.println("Please don't use division by 0!");
-					aeCount++;
+	//				aeCount++;
 				}
-			} while (nfeCount > 0 || aeCount > 0);
-		} catch (Exception e) {
-			System.out.println("General error");
-		}
+				} catch (Exception e) {
+					System.out.println("General error");
+				}
+	//		} while (nfeCount > 0 || aeCount > 0);
+			}while (true);
+			
+		
 	}
 
 }

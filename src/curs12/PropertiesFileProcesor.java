@@ -19,9 +19,9 @@ public class PropertiesFileProcesor {
 																					// singur
 
 //		try {
-			// OutputStream outStream = new FileOutputStream("test.properties"); //canal
-			// comunicare
+			// OutputStream outStream = new FileOutputStream("test.properties"); //canal comunicare
 			// cheie = valoare ==> nume = "Ion" ==> nume este cheie, Ion este valoare
+			
 			Properties propFile = new Properties();
 			propFile.setProperty("user", "TestUser");
 			propFile.setProperty("pass", "Pass123");
@@ -65,6 +65,7 @@ public class PropertiesFileProcesor {
 			System.out.println("Cannot write the prop file!");
 		}
 
+		//update fisier
 		try (OutputStream outStream = new FileOutputStream("test.properties")) {
 
 			propFile.setProperty(key, value);
@@ -90,6 +91,7 @@ public void deleteFromProperties(String key) {
 		System.out.println("Cannot write the prop file!");
 	}
 
+	//stergere din fisier
 	try (OutputStream outStream = new FileOutputStream("test.properties")) {
 
 		propFile.remove(key);

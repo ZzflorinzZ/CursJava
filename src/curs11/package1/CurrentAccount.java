@@ -2,7 +2,7 @@ package curs11.package1;
 
 import homeworkCurs10.InsuficientFundsException;
 
-public class CurrentAccount extends Account{
+public class CurrentAccount extends Account{ 
 
 	public double balance;
 	

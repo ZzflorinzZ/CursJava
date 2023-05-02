@@ -1,5 +1,9 @@
 package homeworkCurs12;
 
+import java.io.File;
+import java.io.IOException;
+import java.util.Scanner;
+
 public class TestTheLongestWord {
 
 	public static void main(String[] args) {
@@ -18,7 +22,8 @@ public class TestTheLongestWord {
 
 		System.out.println("-------------------------------------------");
 
-		String[] getTxtArray = null;
+
+	String[] getTxtArray = null;
 
 		getTxtArray = obj.getTxt.split(" ");
 
@@ -26,6 +31,7 @@ public class TestTheLongestWord {
 		 * for(int i=0; i<getTxtArray.length; i++) { System.out.println(getTxtArray[i]);
 		 * }
 		 */
+		
 		String longestWord = "";
 		int longestWordLength = 0;
 		int wordLength = 0;

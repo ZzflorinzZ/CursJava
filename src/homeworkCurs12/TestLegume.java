@@ -18,12 +18,16 @@ public class TestLegume {
 
 			obj.readFisierLegume(leguma);
 
-			if (obj.calorii != null) {
-				System.out.println("Leguma aleasa de tine are " + obj.calorii + " calorii");
-			} else if (obj.calorii == null) {
-				System.out.println("Nu vindem aceasta leguma");
+			if (obj.readFisierLegume(leguma) != null) {
+				System.out.println("Leguma aleasa de tine are " + obj.readFisierLegume(leguma) + " calorii");
+				break;
 			}
-		} while (obj.calorii == null);
+	//		} else if (obj.calorii == null) {
+				System.out.println("Nu vindem aceasta leguma");
+//			}
+		} while (true);
+				
+	
 	}
 
 }

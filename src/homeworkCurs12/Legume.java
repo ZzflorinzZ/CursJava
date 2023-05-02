@@ -9,7 +9,7 @@ import java.util.Properties;
 
 public class Legume {
 	
-	public String calorii;	
+//	public String calorii;	
 	//am definit variabila asta fiindca nu mi-am dat seama cum as fi putut sa scot nrCaloriiLegume.getProperty(leguma)
 	//in afara metodei readFisierLegume pt a o putea utiliza ca si conditie in metoda de executie
 
@@ -29,7 +29,7 @@ public class Legume {
 		}
 	}
 
-	public void readFisierLegume(String leguma) {
+/*	public void readFisierLegume(String leguma) {
 
 		try (InputStream inputLegume = new FileInputStream("calorii.legume")) {
 			Properties nrCaloriiLegume = new Properties();
@@ -39,5 +39,19 @@ public class Legume {
 			System.out.println("Eroare la citirea din fisier");
 		}
 	}
-
+*/
+	
+	public String readFisierLegume(String leguma) {
+			String calorii = null;
+		try (InputStream inputLegume = new FileInputStream("calorii.legume")) {
+			Properties nrCaloriiLegume = new Properties();
+			nrCaloriiLegume.load(inputLegume);
+			calorii = nrCaloriiLegume.getProperty(leguma);
+		}catch (IOException e) {
+			System.out.println("Eroare la citirea din fisier");
+		}
+		return calorii;
+	}
+	
+	
 }

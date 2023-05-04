@@ -21,6 +21,8 @@ public class Catalog {
 
 		Scanner scan = new Scanner(System.in);
 	
+		
+		
 /*
 		for (String nameFromCatalog : catalog.keySet()) {
 			for (int gradeFromCatalog : catalog.values()) {
@@ -53,15 +55,16 @@ public class Catalog {
 			}
 		}
 */
-//		System.out.println("Your current grade is: " + catalog.get(name));
 		
 		try {
 			System.out.println("Please enter your name");
 			String name = scan.next();
+			name = name.substring(0, 1).toUpperCase() + name.substring(1);
 			System.out.println("Please enter your grade");
 			int grade = scan.nextInt();
 			
 			System.out.println("Your current grade is: " + catalog.get(name));
+			System.out.println("---------------------");
 			
 		if (catalog.containsKey(name) == false) {
 			catalog.put(name, grade);
@@ -73,11 +76,10 @@ public class Catalog {
 					catalog.replace(name, grade);
 				}
 			}
-		}catch (InputMismatchException ime) {
-			System.out.println("Trebuie sa introduci nota fara zecimale");
-		}
-
-//		System.out.println("Your final grade is: " + catalog.get(name));
+		
+		System.out.println("---------------------");
+		System.out.println("Your final grade is: " + catalog.get(name));
+		
 		System.out.println("---------------------");
 		System.out.println("Catalog size is now: " + catalog.size());
 		System.out.println("---------------------");
@@ -85,6 +87,11 @@ public class Catalog {
 		for(String namefromCatalog : catalog.keySet()) {			
 			System.out.println(namefromCatalog + " - " + catalog.get(namefromCatalog));
 		}
+		
+		}catch (InputMismatchException ime) {
+			System.out.println("Trebuie sa introduci nota fara zecimale. Ia-o de la capat");
+			}
+		
 		
 	}
 

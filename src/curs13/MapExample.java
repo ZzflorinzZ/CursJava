@@ -28,7 +28,7 @@ public class MapExample {
 		System.out.println(map.isEmpty());
 		
 		
-		System.out.println(map.get("T"));
+		System.out.println(map.get("V"));
 		
 		System.out.println("contains key: " + map.containsKey("x"));	
 		System.out.println("contains key: " + map.containsValue("Manager"));

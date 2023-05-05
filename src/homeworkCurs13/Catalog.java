@@ -19,57 +19,33 @@ public class Catalog {
 			catalog.put("Florin", 9);
 			catalog.put("George", 10); 
 
-		Scanner scan = new Scanner(System.in);
-	
-		
-		
-/*
-		for (String nameFromCatalog : catalog.keySet()) {
-			for (int gradeFromCatalog : catalog.values()) {
-				if (catalog.get(name.equalsIgnoreCase(nameFromCatalog)) == null) {
-					catalog.put(name, grade);
-					System.out.println("Nu aveai nota, ti-am trecut acum!");
-				} else if (name.equalsIgnoreCase(nameFromCatalog) || grade < gradeFromCatalog) {
-					System.out.println("Nu ai nevoie de alta nota");
-				} else if (name.equalsIgnoreCase(nameFromCatalog) || grade > gradeFromCatalog) {
-					catalog.replace(nameFromCatalog, grade);
-				}
-
-			}
-		}
-*/
-		
-/*		
-		for (String nameFromCatalog : catalog.keySet()) {
-			if (catalog.containsKey(name.equalsIgnoreCase(nameFromCatalog)) == false) {
-				catalog.put(name, grade);
-				System.out.println("Nu aveai nota, ti-am trecut acum!");
-			} else if (catalog.containsKey(name.equalsIgnoreCase(nameFromCatalog)) == true){
-				for (int gradeFromCatalog : catalog.values()) {
-					if (grade < gradeFromCatalog) {
-						System.out.println("Nu ai nevoie de alta nota");
-					}else if (grade > gradeFromCatalog) {
-						catalog.replace(nameFromCatalog, grade);
-					}
-				}
-			}
-		}
-*/
+		Scanner scan = new Scanner(System.in);	
+		System.out.println("Please enter your name");
+		String name = "";
+		int grade = 0;
 		
 		try {
-			System.out.println("Please enter your name");
-			String name = scan.next();
-			name = name.substring(0, 1).toUpperCase() + name.substring(1);
+			name = scan.next();
 			System.out.println("Please enter your grade");
-			int grade = scan.nextInt();
+			grade = scan.nextInt();
+		}catch (InputMismatchException ime) {
+			System.out.println("Trebuie sa introduci nota fara zecimale. Ia-o de la capat");
+			}
+		
+		name = name.substring(0, 1).toUpperCase() + name.substring(1).toLowerCase();
 			
+		if(catalog.get(name) == null) {
+			System.out.println("You don't have a grade");
+		}else {
 			System.out.println("Your current grade is: " + catalog.get(name));
 			System.out.println("---------------------");
+		}
 			
-		if (catalog.containsKey(name) == false) {
+//		if (catalog.containsKey(name) == false) {
+		if (!catalog.containsKey(name)) {	
 			catalog.put(name, grade);
 			System.out.println("Nu aveai nota, ti-am trecut acum!");
-		} else if (catalog.containsKey(name) == true) {
+		} else if (catalog.containsKey(name)) {
 				if (grade <= catalog.get(name)) {
 					System.out.println("Nu ai nevoie de alta nota");
 				}else if (grade > catalog.get(name)) {
@@ -86,12 +62,7 @@ public class Catalog {
 		
 		for(String namefromCatalog : catalog.keySet()) {			
 			System.out.println(namefromCatalog + " - " + catalog.get(namefromCatalog));
-		}
-		
-		}catch (InputMismatchException ime) {
-			System.out.println("Trebuie sa introduci nota fara zecimale. Ia-o de la capat");
-			}
-		
+		}		
 		
 	}
 

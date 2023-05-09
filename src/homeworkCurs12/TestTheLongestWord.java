@@ -27,10 +27,11 @@ public class TestTheLongestWord {
 
 		getTxtArray = obj.getTxt.split(" ");
 
-		/*
-		 * for(int i=0; i<getTxtArray.length; i++) { System.out.println(getTxtArray[i]);
-		 * }
-		 */
+		
+		for(int i=0; i<getTxtArray.length; i++) { 
+			System.out.println(getTxtArray[i]);
+		}
+
 		
 		String longestWord = "";
 		int longestWordLength = 0;

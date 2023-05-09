@@ -7,7 +7,7 @@ public class StringBuilderExample {
 		reverseString("masina");
 		replaceFromString("Salut Bogdan", 6, 12, "Oana");
 		deleteFromString("masina", 2, 5);
-		insertIntoString("Salut ", 5, "Ion");
+		insertIntoString("Salut ", 6, "Ion");
 		addSpacesToText("thisIsACamelCaseText");
 	}
 	

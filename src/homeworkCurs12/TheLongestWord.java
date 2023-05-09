@@ -26,9 +26,9 @@ public class TheLongestWord {
 	//read txt file
 	public void readTxt() {
 		
-		File txtReaging = new File("random.txt");
+		File txtReading = new File("random.txt");
 		
-		try(Scanner scan = new Scanner(txtReaging)){
+		try(Scanner scan = new Scanner(txtReading)){
 			while(scan.hasNext()) {
 	//			System.out.println(scan.nextLine());
 				getTxt = getTxt + " " + scan.nextLine();

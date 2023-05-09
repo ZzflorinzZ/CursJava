@@ -16,7 +16,7 @@ public class ListExample2 {
 		
 		System.out.println(list.contains("opt"));
 		
-		list.subList(1, 4).clear();		//indexul de inceput este inclusiv, iar cel de final este exclusiv
+		list.subList(1, 4).clear();		//indexul de inceput este inclus, iar cel de final este exclus
 		
 		System.out.println("--------------------");
 		
